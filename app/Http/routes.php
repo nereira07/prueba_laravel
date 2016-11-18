@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+//grupo de rutas
+/*Route::group(['prefix'=>'articles'], function(){
+    Route::get('view/{article?}', function($article="vacio"){
+        echo $article;
+    });
+});*/
+
+//uso de controladores
+Route::group(['prefix'=>'articles'], function(){
+    Route::get('view/{id}', [
+        'uses'=>'TestController@view',
+        'as'=>'articlesview'
+    ]);
+});

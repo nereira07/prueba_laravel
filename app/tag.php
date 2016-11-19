@@ -11,6 +11,6 @@ class tag extends Model
     protected $fillable=['name'];
     
     public function articles (){
-        return $this->belongsToMany('App\article');
+        return $this->belongsToMany('App\article')->whitTimestamp();
     }
 }

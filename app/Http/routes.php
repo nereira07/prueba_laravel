@@ -13,6 +13,11 @@
 
 Route::get('/', function () {
     return view('welcome');
+    //return view('test.index');
+});
+
+Route::group(['prefix'=>'admin'], function(){
+    Route::resource('users','UsersController' );
 });
 //grupo de rutas
 /*Route::group(['prefix'=>'articles'], function(){
@@ -20,11 +25,24 @@ Route::get('/', function () {
         echo $article;
     });
 });*/
+//uso de rutas
+//
+/*Route::get('articles/{nombre?}', function($nombre="no coloco nombre"){
+
+    echo "El nombre que has colocado es:".$nombre;
+});
+*/
 
 //uso de controladores
-Route::group(['prefix'=>'articles'], function(){
-    Route::get('view/{id}', [
-        'uses'=>'TestController@view',
-        'as'=>'articlesview'
+/*Route::group(['prefix'=>'articles'], function(){
+    Route::get('view/{id}',[
+        'uses'=> 'TestController@view',
+        'as'=> 'articlesview'
+        
     ]);
-});
+});*/
+/*rutas manejados por contralador
+
+Route::resource('/test','TestController');
+ * /
+ */

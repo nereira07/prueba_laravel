@@ -1,7 +1,15 @@
 @extends('admin.template.main')
 @section('title','crear Usuario')
 @section('content')
-
+    @if(count($errors)>0)
+        <div class="alert alert-danger" role="alert">
+            <ul>
+                @foreach( $errors->all() as $error)
+                <li> {{$error}} </li>     
+                @endforeach
+            </ul>
+        </div>
+    @endif
     {!! Form::open(['route'=>'admin.users.store','method'=>'POST'])!!}
         <div class="form-group">
             {!! Form::label('name','Nombre')!!}
@@ -22,7 +30,8 @@
     
         <div class="form-group">
             {!! Form::label('type','Tipo')!!}
-            {!! Form::select('type',[''=>'Seleccione una opcion','member'=>'Miembro','admin'=>'Administrador'],null,['class'=>'form-control'])!!}
+            {!! Form::select('type',[''=>'Seleccione una opcion','member'=>'Gerencias','admin'=>'Administrador'],
+                              null,['class'=>'form-control'])!!}
         </div>
     
         <div class="form-group">

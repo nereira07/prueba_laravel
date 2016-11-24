@@ -11,6 +11,9 @@
 <body>
     @include('admin.template.partials.nav')
     <section>
+        @yield('title','Default')
+   
+        @include('flash::message')
         @yield('content')
     </section>
    

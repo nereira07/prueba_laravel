@@ -32,9 +32,72 @@
             </tr>
             @endforeach
         </tbody>
+  
+                    
+        </td>
     </table>
 <div align="center"> {!!$users->render()!!}</div>
 <hr>
 <a href="{{route('admin.users.create')}}" class="btn btn-info">Registrar nuevo usuario</a>
-<a href="" onclick="window.print(); return false;" class="btn btn-info">Imprimir</a>  <hr>
+<a href="" onclick="window.print(); return false;" class="btn btn-info">Imprimir</a>  
+<!--boton de alertas o mensajes-->
+<a href="#ventana1" class="btn btn- btn-info" data-toggle="modal">boton Alerta</a>
+    <div  class="modal fade" id="ventana1"> 
+        <div class="modal-dialog">
+            <div class="modal-content"> 
+                <!--header de la ventana-->
+                <div class="modal-header">
+                    <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                     
+                    <h4 class="modal-title">Encabezado de nuestra ventana</h4>
+                </div>
+                <!-- Contenido de la ventana -->
+                <div class="modal-body">
+                     <table> 
+                        <tr>
+                            <td>
+                                <img src="{{asset('imagenes/warning.png')}}" alt="warning" class="img-thumbnail"/>                                
+                            </td>
+                            <td>
+                                 <p ><font color="white">...</font></p>
+                            </td>
+                            <td>
+                                 <p>contenido de la ventana</p>
+                            </td>
+                        </tr>
+                                            
+                    </table>  
+                   
+                </div>
+                <!--footer de la ventana-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+<!--boton de ayuda-->
+<a href="#ventana2" class="btn btn- btn-info" data-toggle="modal">Ayuda</a>
+    <div  class="modal fade" id="ventana2"> 
+        <div class="modal-dialog">
+            <div class="modal-content"> 
+                <!--header de la ventana-->
+                <div class="modal-header">
+                    <button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                     
+                    <h4 class="modal-title">Encabezado de nuestra ventana</h4>
+                </div>
+                <!-- Contenido de la ventana -->
+                <div class="modal-body">             
+                    <p>contenido de la ventana</p>
+                <!--footer de la ventana-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+         
+            </div>
+        </div>
+    </div>
+
 @endsection

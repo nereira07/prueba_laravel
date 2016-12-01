@@ -10,7 +10,9 @@
             </ul>
         </div>
     @endif
+  
     {!! Form::open(['route'=>'admin.users.store','method'=>'POST'])!!}
+    
         <div class="form-group">
             {!! Form::label('name','Nombre')!!}
             {!! Form::text('name',null,['class'=>'form-control','placeholder'=>'Nombre completo','required']) !!}
@@ -36,6 +38,7 @@
     
         <div class="form-group">
             {!! Form::submit('Registrar',['class'=>'btn btn-primary'])!!}
+           
 
         </div>
 

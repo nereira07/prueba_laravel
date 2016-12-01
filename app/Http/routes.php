@@ -23,7 +23,12 @@ Route::group(['prefix'=>'admin'], function(){
         'uses'=>'UsersController@destroy',
         'as'=>'admin.users.destroy'
     ]);
+    Route::resource('bitacora','bitacoracontroller');//ruta para bitacora
+    //Route::resource('categories','categoriescontroller');//ruta para categoria
 });
+
+
+    //ruta para eliminar
 //grupo de rutas
 /*Route::group(['prefix'=>'articles'], function(){
     Route::get('view/{article?}', function($article="vacio"){

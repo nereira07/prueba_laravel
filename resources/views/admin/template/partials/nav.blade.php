@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="{{route('admin.users.index')}}">Usuarios <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Categoria</a></li>
+        <li class="active"><a href="{{route('admin.bitacora.index')}}">Bitacora <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Art&iacute;culos</a></li>
         <li><a href="#">Imagenes</a></li>
         <li><a href="#">Tags</a></li>
